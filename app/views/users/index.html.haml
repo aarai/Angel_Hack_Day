@@ -1,6 +1,6 @@
 %h1 Presciption Program Signup
 
--#
+-# Down to line 25 is commented out
   %table
     %tr
       %th Name
@@ -31,3 +31,5 @@
 - @users.each do |user|
   .btn.btn-warning
     = link_to 'Edit Signup Info', edit_user_path(user)
+  .btn.btn-primary
+    = link_to 'Fill Script', new_prescription_path

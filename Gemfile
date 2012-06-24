@@ -5,6 +5,7 @@ gem 'awesome_print'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'devise'
+gem 'jquery-rails'
 
 group :development do	
   gem 'sqlite3'

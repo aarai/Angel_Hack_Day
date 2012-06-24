@@ -4,7 +4,7 @@
   %b Name:
   = @user.name
 %p
-  %b Dob:
+  %b Date Of Birth:
   = @user.dob
 %p
   %b Address:
@@ -19,6 +19,8 @@
 %p
   %b Image
   = image_tag( @user.insurance)
+
+%p#map
 
 = link_to 'Edit', edit_user_path(@user)
 \|

@@ -1,0 +1,19 @@
+%h1 Listing prescriptions
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @prescriptions.each do |prescription|
+    %tr
+      %td= prescription.name
+      %td= link_to 'Show', prescription
+      %td= link_to 'Edit', edit_prescription_path(prescription)
+      %td= link_to 'Destroy', prescription, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Prescription', new_prescription_path

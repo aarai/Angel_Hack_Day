@@ -1,0 +1,16 @@
+= form_for @prescription do |f|
+  -if @prescription.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@prescription.errors.count, "error")} prohibited this prescription from being saved:"
+      %ul
+        - @prescription.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :photo, 'Upload Script'
+    = f.file_field :photo
+  .actions
+    = f.submit 'Save'
