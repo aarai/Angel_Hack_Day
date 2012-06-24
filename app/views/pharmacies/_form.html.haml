@@ -1,0 +1,25 @@
+= form_for @pharmacy do |f|
+  -if @pharmacy.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@pharmacy.errors.count, "error")} prohibited this pharmacy from being saved:"
+      %ul
+        - @pharmacy.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :address
+    = f.text_field :address
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :phone
+    = f.text_field :phone
+  .field
+    = f.label :fax
+    = f.text_field :fax
+  .actions
+    = f.submit 'Save'

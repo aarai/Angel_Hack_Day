@@ -18,9 +18,9 @@
           = link_to 'Delete', prescription, :confirm => 'Are you sure?', :method => :delete
         %td.spacer
         %td.btn.btn-success
-          = link_to 'Find Pharmacy'
+          = link_to 'Find Closest Pharmacy', pharmacies_path
 
 %br
 
 .btn
-  = link_to 'New Prescription', new_prescription_path
+  = link_to 'Add Another Prescription', new_prescription_path
