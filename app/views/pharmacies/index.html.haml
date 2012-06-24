@@ -1,4 +1,4 @@
-%h1 Listing pharmacies
+%h1 Pharmacies
 
 %table.table
   %tr
@@ -13,16 +13,21 @@
 
   - @pharmacies.each do |pharmacy|
     %tr
-      %td= pharmacy.name
-      %td= pharmacy.address
-      %td= pharmacy.email
-      %td= pharmacy.phone
-      %td= pharmacy.fax
+      %td
+        = link_to pharmacy.name, pharmacy
+      %td
+        = link_to pharmacy.address, pharmacy
+      %td
+        = link_to pharmacy.email, pharmacy
+      %td
+        = link_to pharmacy.phone, pharmacy
+      %td
+        = link_to pharmacy.fax, pharmacy
     -#  
       %td= link_to 'Show', pharmacy
       %td= link_to 'Edit', edit_pharmacy_path(pharmacy)
       %td= link_to 'Destroy', pharmacy, :confirm => 'Are you sure?', :method => :delete
 
 %br
-
-= link_to 'New Pharmacy', new_pharmacy_path
+.btn
+  = link_to 'Enter Your Own Location'
