@@ -11,10 +11,10 @@
       %tr
         %td= image_tag prescription.photo
         %td.spacer
-        %td.btn.btn-primary
+        %td.btn.btn-warning
           = link_to 'Edit', edit_prescription_path(prescription)
         %td.spacer
-        %td.btn.btn-primary
+        %td.btn.btn-warning
           = link_to 'Delete', prescription, :confirm => 'Are you sure?', :method => :delete
         %td.spacer
         %td.btn.btn-success
@@ -22,5 +22,5 @@
 
 %br
 
-.btn.btn-primary
+.btn.btn-warning
   = link_to 'Add Prescription', new_prescription_path
