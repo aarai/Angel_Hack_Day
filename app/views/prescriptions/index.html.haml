@@ -4,17 +4,17 @@
 - @prescriptions.each do |prescription|
   %table
     %tr
-      %th= "Date: #{change_date(prescription.photo_updated_at)}"
+      %th= "Script Name: #{prescription.name}"
       %th
       %th
       %th
       %tr
         %td= image_tag prescription.photo
         %td.spacer
-        %td.btn
+        %td.btn.btn-primary
           = link_to 'Edit', edit_prescription_path(prescription)
         %td.spacer
-        %td.btn
+        %td.btn.btn-primary
           = link_to 'Delete', prescription, :confirm => 'Are you sure?', :method => :delete
         %td.spacer
         %td.btn.btn-success
@@ -22,5 +22,5 @@
 
 %br
 
-.btn
+.btn.btn-primary
   = link_to 'Add Prescription', new_prescription_path

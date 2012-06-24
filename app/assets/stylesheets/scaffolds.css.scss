@@ -22,6 +22,11 @@ pre {
     color: #000; }
 }
 
+.nocolor {
+  background-color:#fff;
+  background-image:none;
+}
+
 a {
   color: #000;
   &:visited {
