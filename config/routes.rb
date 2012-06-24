@@ -8,4 +8,6 @@ PharmaNewApp::Application.routes.draw do
 
   root :to => "users#index"
 
+  match 'confirm', :controller => "pharmacies", :action => "confirm"
+
 end

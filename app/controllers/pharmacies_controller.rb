@@ -80,4 +80,7 @@ class PharmaciesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def confirm
+  end
 end

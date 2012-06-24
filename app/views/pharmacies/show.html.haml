@@ -16,6 +16,8 @@
   %b Fax:
   = @pharmacy.fax
 
-= link_to 'Edit', edit_pharmacy_path(@pharmacy)
+.btn
+  = link_to 'Fill Prescription Now', confirm_path
 \|
-= link_to 'Back', pharmacies_path
+.btn
+  = link_to 'Fill Prescription Later', pharmacies_path

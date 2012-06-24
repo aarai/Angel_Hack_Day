@@ -15,6 +15,13 @@ pre {
   padding: 10px;
   font-size: 11px; }
 
+.nowhite a {
+  &:hover {
+    color: #c6c6c6;}
+  &:visited {
+    color: #000; }
+}
+
 a {
   color: #000;
   &:visited {
