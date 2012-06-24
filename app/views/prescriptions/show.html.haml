@@ -3,6 +3,9 @@
 %p
   %b Name:
   = @prescription.name
+%p
+  %b Script:
+  = image_tag @prescription.photo
 
 = link_to 'Edit', edit_prescription_path(@prescription)
 \|

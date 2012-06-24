@@ -1,4 +1,4 @@
-%h1 Listing prescriptions
+%h1 My Prescriptions
 
 %table
   %tr
@@ -9,11 +9,18 @@
 
   - @prescriptions.each do |prescription|
     %tr
-      %td= prescription.name
-      %td= link_to 'Show', prescription
-      %td= link_to 'Edit', edit_prescription_path(prescription)
-      %td= link_to 'Destroy', prescription, :confirm => 'Are you sure?', :method => :delete
+      %td= image_tag prescription.photo
+      %td.spacer
+      %td.btn
+        = link_to 'Edit', edit_prescription_path(prescription)
+      %td.spacer
+      %td.btn
+        = link_to 'Delete', prescription, :confirm => 'Are you sure?', :method => :delete
+      %td.spacer
+      %td.btn.btn-success
+        = link_to 'Find Pharmacy'
 
 %br
 
-= link_to 'New Prescription', new_prescription_path
+.btn
+  = link_to 'New Prescription', new_prescription_path

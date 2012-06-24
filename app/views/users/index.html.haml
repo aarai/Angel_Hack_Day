@@ -29,7 +29,11 @@
   = link_to 'Program Signup', new_user_path
 
 - @users.each do |user|
+  -# .btn.btn-warning
+  -#   = link_to 'Show', user
   .btn.btn-warning
     = link_to 'Edit Signup Info', edit_user_path(user)
   .btn.btn-primary
     = link_to 'Fill Script', new_prescription_path
+  .btn.btn-danger
+    = link_to 'Close Account', user, :confirm => 'Are you sure you want to close your account?', :method => :delete
