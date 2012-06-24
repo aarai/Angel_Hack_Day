@@ -1,0 +1,25 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @user.name
+%p
+  %b Dob:
+  = @user.dob
+%p
+  %b Address:
+  = @user.address
+%p
+  %b Email:
+  = @user.email
+%p
+  %b Phone:
+  = @user.phone
+
+%p
+  %b Image
+  = image_tag( @user.insurance)
+
+= link_to 'Edit', edit_user_path(@user)
+\|
+= link_to 'Back', users_path

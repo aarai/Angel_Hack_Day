@@ -1,3 +1,5 @@
 PharmaNewApp::Application.routes.draw do
-  root :to => "home#index"
+  resources :users
+
+  root :to => "users#index"
 end
