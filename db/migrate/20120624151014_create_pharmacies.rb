@@ -5,7 +5,7 @@ class CreatePharmacies < ActiveRecord::Migration
       t.string :address
       t.string :email
       t.string :phone
-      t.string :fax
+      t.string :distance
 
       t.timestamps
     end

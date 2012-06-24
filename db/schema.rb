@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20120624151014) do
     t.string   "address"
     t.string   "email"
     t.string   "phone"
-    t.string   "fax"
+    t.string   "distance"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
