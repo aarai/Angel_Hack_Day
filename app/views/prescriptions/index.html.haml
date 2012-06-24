@@ -1,24 +1,24 @@
 %h1 My Prescriptions
 
-%table
-  %tr
-    %th Name
-    %th
-    %th
-    %th
 
-  - @prescriptions.each do |prescription|
+- @prescriptions.each do |prescription|
+  %table
     %tr
-      %td= image_tag prescription.photo
-      %td.spacer
-      %td.btn
-        = link_to 'Edit', edit_prescription_path(prescription)
-      %td.spacer
-      %td.btn
-        = link_to 'Delete', prescription, :confirm => 'Are you sure?', :method => :delete
-      %td.spacer
-      %td.btn.btn-success
-        = link_to 'Find Pharmacy'
+      %th= "Date: #{change_date(prescription.photo_updated_at)}"
+      %th
+      %th
+      %th
+      %tr
+        %td= image_tag prescription.photo
+        %td.spacer
+        %td.btn
+          = link_to 'Edit', edit_prescription_path(prescription)
+        %td.spacer
+        %td.btn
+          = link_to 'Delete', prescription, :confirm => 'Are you sure?', :method => :delete
+        %td.spacer
+        %td.btn.btn-success
+          = link_to 'Find Pharmacy'
 
 %br
 

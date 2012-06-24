@@ -10,6 +10,7 @@ class PrescriptionsController < ApplicationController
     end
   end
 
+
   # GET /prescriptions/1
   # GET /prescriptions/1.json
   def show
