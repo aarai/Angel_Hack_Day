@@ -4,6 +4,7 @@ gem 'rails', '3.2.6'
 gem 'awesome_print'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'devise'
 
 group :development do	
   gem 'sqlite3'
