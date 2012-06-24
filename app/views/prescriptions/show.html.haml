@@ -7,6 +7,8 @@
   %b Script:
   = image_tag @prescription.photo
 
-= link_to 'Edit', edit_prescription_path(@prescription)
+.btn
+  = link_to 'Edit', edit_prescription_path(@prescription)
 \|
-= link_to 'Back', prescriptions_path
+.btn
+  = link_to 'Back', prescriptions_path

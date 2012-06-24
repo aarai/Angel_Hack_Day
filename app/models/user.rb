@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
 	      :medium     => '200x200'
 	    }
 =end
+
 end
